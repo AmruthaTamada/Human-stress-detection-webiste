@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header class="main-header">
+        <h1>ActivePulse</h1>
+    </header>
+
+    <nav>
+        {% comment %} <a href="{% url 'home' %}">Home</a> {% endcomment %}
+    </nav>
+
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 StressChecker. All rights reserved.</p>
+            <div class="contact-us">
+                <h3>Contact Us</h3>
+                <p>If you have any questions or feedback, feel free to reach out:</p>
+                <p>Email: <a href="mailto:support@stresschecker.com">support@stresschecker.com</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

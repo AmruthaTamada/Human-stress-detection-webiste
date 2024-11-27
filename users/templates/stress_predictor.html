@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Entry</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="fade-in">
+    <header class="main-header">
+        <h1>ActivePulse</h1>
+    </header>
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'logout' %}">Logout</a>
+
+    </nav>
+    <div class="container">
+        <h1>Enter Stress Data</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-section">
+                <h2>Personal Details</h2>
+                <table>
+                    <tr>
+                        <td><label for="name">Name</label></td>
+                        <td><input type="text" id="name" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="age">Age</label></td>
+                        <td><input type="number" id="age" name="age" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="gender">Gender</label></td>
+                        <td>
+                            <select id="gender" name="gender" required>
+                                <option value="" disabled selected>Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="city">City</label></td>
+                        <td><input type="text" id="city" name="city" required></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="form-section">
+                <h2>Health Data</h2>
+                <table>
+                    <tr>
+                        <td><label for="snoring_rate">Snoring Rate</label></td>
+                        <td><input type="number" id="snoring_rate" name="snoring_rate" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="respiratory_rate">Respiratory Rate</label></td>
+                        <td><input type="number" id="respiratory_rate" name="respiratory_rate" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="body_temperature">Body Temperature</label></td>
+                        <td><input type="number" id="body_temperature" name="body_temperature" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="limb_movements">Limb Movements</label></td>
+                        <td><input type="number" id="limb_movements" name="limb_movements" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="blood_oxygen">Blood Oxygen</label></td>
+                        <td><input type="number" id="blood_oxygen" name="blood_oxygen" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="eye_movement">Eye Movement</label></td>
+                        <td><input type="number" id="eye_movement" name="eye_movement" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="sleep_hours">Sleep Hours</label></td>
+                        <td><input type="number" id="sleep_hours" name="sleep_hours" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="heart_rate">Heart Rate</label></td>
+                        <td><input type="number" id="heart_rate" name="heart_rate" required></td>
+                    </tr>
+                </table>
+            </div>
+            <br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 StressChecker. All rights reserved.</p>
+            <div class="contact-us">
+                <h3>Contact Us</h3>
+                <p>If you have any questions or feedback, feel free to reach out:</p>
+                <p>Email: <a href="mailto:support@stresschecker.com">support@stresschecker.com</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

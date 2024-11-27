@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Prediction Result</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="fade-in">
+    <header class="main-header">
+        <h1>ActivePulse</h1>
+    </header>
+    
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'stress_predictor' %}">Enter Data</a>
+    </nav>
+
+    <div class="container">
+        <h1>Stress Prediction Result</h1>
+        
+        <!-- Personal Details -->
+        <h2>Personal Details:</h2>
+        <ul>
+            <li><strong>Name:</strong> {{ stress_data.name }}</li>
+            <li><strong>Age:</strong> {{ stress_data.age }}</li>
+            <li><strong>Gender:</strong> {{ stress_data.gender }}</li>
+            <li><strong>City:</strong> {{ stress_data.city }}</li>
+        </ul>
+
+        <!-- Health Data -->
+        <h2>Health Data:</h2>
+        <ul>
+            <li><strong>Snoring Rate:</strong> {{ stress_data.snoring_rate }}</li>
+            <li><strong>Respiratory Rate:</strong> {{ stress_data.respiratory_rate }}</li>
+            <li><strong>Body Temperature:</strong> {{ stress_data.body_temperature }}</li>
+            <li><strong>Limb Movements:</strong> {{ stress_data.limb_movements }}</li>
+            <li><strong>Blood Oxygen:</strong> {{ stress_data.blood_oxygen }}</li>
+            <li><strong>Eye Movement:</strong> {{ stress_data.eye_movement }}</li>
+            <li><strong>Sleep Hours:</strong> {{ stress_data.sleep_hours }}</li>
+            <li><strong>Heart Rate:</strong> {{ stress_data.heart_rate }}</li>
+            
+        </ul>
+
+        <!-- Stress Level -->
+        <div>
+            <h2>Stress Level:</h2>
+            <p class="stress-level">{{ stress_level }}</p>
+        </div>
+        
+        <!-- Navigation Links -->
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 StressChecker. All rights reserved.</p>
+            <div class="contact-us">
+                <h3>Contact Us</h3>
+                <p>If you have any questions or feedback, feel free to reach out:</p>
+                <p>Email: <a href="mailto:support@stresschecker.com">support@stresschecker.com</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

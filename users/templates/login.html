@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header class="main-header">
+        <h1>ActivePulse</h1>
+    </header>
+
+    <nav>
+        <a href="{% url 'logout' %}">Logout</a>
+        
+
+    </nav>
+
+    <div class="container">
+        <h2>Login</h2>
+        <form method="post">
+            {% csrf_token %}
+            <label for="username">Username:</label>
+            <input type="text" name="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" required><br><br>
+            <br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 StressChecker. All rights reserved.</p>
+            <div class="contact-us">
+                <h3>Contact Us</h3>
+                <p>If you have any questions or feedback, feel free to reach out:</p>
+                <p>Email: <a href="mailto:support@stresschecker.com">support@stresschecker.com</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StressChecker</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <h1> ActivePulse</h1>
+        <nav class="header-nav">
+            <a href="{% url 'login' %}">Login</a>
+            <a href="{% url 'signup' %}">Signup</a>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <h2>Monitor and Analyze Your Stress Levels</h2>
+        <p style="text-align: center; font-size: 1.1em; margin-bottom: 30px; color: #333;">
+            Our innovative tools help you track, understand, and manage your stress with precision and ease.
+        </p>
+    </div>
+    <br><br><br><br>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 StressChecker. All rights reserved.</p>
+            <div class="contact-us">
+                <h3>Contact Us</h3>
+                <p>Feel free to reach out with questions or feedback:</p>
+                <p>Email: <a href="mailto:support@stresschecker.com">support@stresschecker.com</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
