@@ -78,11 +78,11 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'prediction_db',
-        'USER': 'root',
-        'PASSWORD': 'MySQL@2024',
+        'NAME': 'db_name',
+        'USER': 'user_name',
+        'PASSWORD': 'ur_user_passwd',
         'HOST': '127.0.0.1',  # Default MySQL host
-        'PORT': '3307',       # Default MySQL port
+        'PORT': '3306',       # Default MySQL port
     }
 }
 
