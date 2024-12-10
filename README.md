@@ -36,7 +36,7 @@ This application leverages the power of AI to improve mental health 🧠, provid
 ## 🛠️ **Setup & Installation**  
 
 1. **Clone this repository**:  
-   git clone https://github.com/your-username/human-stress-detection-website.git  
+   git clone https://github.com/AmruthaTamada/Human-stress-detection-webiste.git 
 
 2. **Navigate to the project directory**:  
    cd human-stress-detection-website  
